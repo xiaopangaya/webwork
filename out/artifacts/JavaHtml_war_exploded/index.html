@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery/jquery-3.2.1.js"></script>
+    <script src="js/test2.js"></script>
+    <!--    <script src="js/test.js"></script>-->
+
+</head>
+<body>
+    <div class="divlogin">
+        <div class="divw divtop">
+        </div>
+
+        <div class="divw divmiddle">
+                <table>
+                    <tr>
+                        <td>用户名：</td>
+                        <td><input id="username"></td>
+                    </tr>
+                    <tr>
+                        <td>密码：</td>
+                        <td><input type="password" id="password"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button  id="loginTo" >登录</button>
+                            <button type="reset" class="resetbut" >重置</button>
+                            <a href="#">[返回首页]</a>
+                        </td>
+                    </tr>
+                </table>
+
+        </div>
+
+        <div class="divw divbutton">
+        </div>
+        <div>
+            <input type="checkbox" id="text"> text
+        </div>
+    </div>
+    <form method="get" action="towork.action">
+        <input id="name" name="uname">
+        <input type="password" id="pass" name="upass">
+        <button>dl</button>
+    </form>
+</body>
+<script>
+    $(function (){
+        $(".resetbut").click(function (){
+            $("input").val("hello")
+            $("td").css("color","red")
+            $("td input").css("color","blue")
+        });
+        $("#text").click(function (){
+            var inp =$("td input");
+            $.each(inp,function (i,n){
+                n=$(n);
+                n.val("what")
+            })
+        })
+    })
+</script>
+</html>
